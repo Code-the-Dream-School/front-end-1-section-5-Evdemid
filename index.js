@@ -35,7 +35,7 @@ studentsEl.addEventListener("click", (evt) => {
     let data = await getData();
     console.log(data);
     let html = "";
-    // data.map(student => {
+    data.map(student => {
 
     let htmlSegment = `<div class="card text-dark bg-light border-dark mb-5" style="max-width: 18rem;">
       <div class="card-body">
@@ -48,13 +48,13 @@ studentsEl.addEventListener("click", (evt) => {
           <p class="card-text mb-2"></p>
           <div class = 'card-footer d-flex w-100 justify-content-around'>
             <button class="submit col-5 btn btn-sm btn-outline-info" type="button">Add Course</button>
-            <button class="submit col-5 btn btn-sm btn-outline-info" type="button">Edit Info</button>
+            <button class="submit col-5 btn btn-sm btn-outline-info" type="button">Edit</button>
           </div>
       </div>
     </div>`;
 
     html += htmlSegment;
-    // });
+    });
 
     let cardsContainer = document.querySelector(".cards-container");
     cardsContainer.innerHTML = html;
